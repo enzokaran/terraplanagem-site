@@ -33,8 +33,9 @@ function useFonts() {
     const style = document.createElement("style");
     style.textContent = `
       *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-      html{scroll-behavior:smooth}
-      body{background:#0a0a0a;color:#f5f3ef;overflow-x:hidden}
+      html{scroll-behavior:smooth;overflow-x:hidden}
+      body{background:#0a0a0a;color:#f5f3ef;overflow-x:hidden;max-width:100vw}
+      p,h1,h2,h3,span,a{word-break:break-word;overflow-wrap:break-word}
       @keyframes heroZoom{0%{transform:scale(1.05)}100%{transform:scale(1.13)}}
       @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
       @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -392,19 +393,19 @@ function About() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
           {/* image */}
-          <div className="reveal-l" style={{ position: "relative" }}>
+          <div className="reveal-l" style={{ position: "relative", paddingBottom: "1.5rem", paddingRight: "1.5rem" }}>
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
               alt="Obra de terraplanagem"
               style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover", filter: "grayscale(20%) contrast(1.1)", display: "block" }} />
-            <div style={{ position: "absolute", top: 0, left: 0, right: 16, bottom: 16, border: "1px solid rgba(245,197,24,.2)", transform: "translate(16px,16px)", pointerEvents: "none" }} />
-            <div style={{ position: "absolute", bottom: "-1.5rem", right: "-1.5rem", background: C.yellow, color: C.black, padding: "1.4rem 1.6rem", textAlign: "center" }}>
+            <div style={{ position: "absolute", top: 16, left: 16, right: 0, bottom: 0, border: "1px solid rgba(245,197,24,.2)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", bottom: 0, right: 0, background: C.yellow, color: C.black, padding: "1.4rem 1.6rem", textAlign: "center" }}>
               <strong style={{ display: "block", fontFamily: FONT.display, fontSize: "3rem", lineHeight: 1 }}>19</strong>
               <span style={{ fontFamily: FONT.cond, fontSize: ".65rem", letterSpacing: ".15em", textTransform: "uppercase", fontWeight: 700 }}>Anos de<br />Experiência</span>
             </div>
           </div>
 
           {/* text */}
-          <div className="reveal-r">
+          <div className="reveal-r" style={{ minWidth: 0 }}>
             <div className="reveal"><SectionLabel>Sobre a empresa</SectionLabel></div>
             <SectionTitle>
               MOVEMOS A TERRA.<br />CONSTRUÍMOS<br /><span style={{ color: C.yellow }}>O FUTURO.</span>
@@ -568,7 +569,7 @@ function Machines() {
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(255px,1fr))", gap: "1.8rem" }}>
           {MACHINES.map(([src, cat, name, desc], i) => (
-            <div key={name} className={`mach-card reveal d${(i % 3) + 1}`} style={{ position: "relative", overflow: "hidden" }}>
+            <div key={name} className={`mach-card reveal d${(i % 3) + 1}`} style={{ position: "relative" }}>
               <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/10" }}>
                 <img src={src} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(25%) contrast(1.1)", transition: "transform .5s ease,filter .5s ease", display: "block" }} />
                 <div className="mach-bar" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 3, background: C.yellow }} />
