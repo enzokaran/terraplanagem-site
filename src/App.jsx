@@ -267,7 +267,7 @@ function Navbar() {
               {l}
             </a>
           ))}
-          <a href="https://wa.me/5548999999999" className="nav-cta-btn"
+          <a href="https://wa.me/554898008162" className="nav-cta-btn"
             style={{ background: C.yellow, color: C.black, fontFamily: FONT.cond, fontWeight: 700, fontSize: ".78rem", letterSpacing: ".15em", textTransform: "uppercase", padding: ".6rem 1.4rem", textDecoration: "none", clipPath: "polygon(0 0,93% 0,100% 100%,7% 100%)" }}>
             Orçamento
           </a>
@@ -295,7 +295,7 @@ function Navbar() {
               {l}
             </a>
           ))}
-          <a href="https://wa.me/5548999999999" onClick={() => setMenuOpen(false)}
+          <a href="https://wa.me/554898008162" onClick={() => setMenuOpen(false)}
             className="btn-primary"
             style={{ display: "inline-flex", alignItems: "center", gap: ".6rem", background: C.yellow, color: C.black, fontFamily: FONT.cond, fontWeight: 700, fontSize: ".9rem", letterSpacing: ".12em", textTransform: "uppercase", padding: ".85rem 2rem", textDecoration: "none" }}>
             <IconWA /> Solicitar Orçamento
@@ -336,11 +336,11 @@ function Hero() {
         </p>
 
         <div className="hero-anim-4 cta-actions" style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-          <a href="https://wa.me/5548999999999?text=Olá! Gostaria de solicitar um orçamento." className="btn-primary"
+          <a href="https://wa.me/554898008162?text=Olá! Gostaria de solicitar um orçamento." className="btn-primary"
             style={{ display: "inline-flex", alignItems: "center", gap: ".55rem", background: C.yellow, color: C.black, fontFamily: FONT.cond, fontWeight: 700, fontSize: ".88rem", letterSpacing: ".12em", textTransform: "uppercase", padding: ".85rem 1.9rem", textDecoration: "none", clipPath: "polygon(0 0,94% 0,100% 100%,6% 100%)" }}>
             <IconMsg /> Solicitar Orçamento
           </a>
-          <a href="https://wa.me/5548999999999" className="btn-ghost"
+          <a href="https://wa.me/554898008162" className="btn-ghost"
             style={{ display: "inline-flex", alignItems: "center", gap: ".55rem", background: "transparent", border: "1.5px solid rgba(245,243,239,.35)", color: C.white, fontFamily: FONT.cond, fontWeight: 600, fontSize: ".88rem", letterSpacing: ".12em", textTransform: "uppercase", padding: ".85rem 1.9rem", textDecoration: "none" }}>
             <IconWA /> Falar no WhatsApp
           </a>
@@ -388,7 +388,7 @@ function Ticker() {
 function About() {
   const metrics = [["850+", "Obras concluídas"], ["400+", "Clientes atendidos"], ["35+", "Máquinas em frota"]];
   return (
-    <section id="sobre" style={{ background: C.coal, padding: "6rem 2rem" }}>
+    <section id="sobre" style={{ background: C.coal, padding: "6rem 2rem", overflow: "hidden" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
           {/* image */}
@@ -396,7 +396,7 @@ function About() {
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
               alt="Obra de terraplanagem"
               style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover", filter: "grayscale(20%) contrast(1.1)", display: "block" }} />
-            <div style={{ position: "absolute", inset: 0, border: "1px solid rgba(245,197,24,.2)", transform: "translate(16px,16px)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", top: 0, left: 0, right: 16, bottom: 16, border: "1px solid rgba(245,197,24,.2)", transform: "translate(16px,16px)", pointerEvents: "none" }} />
             <div style={{ position: "absolute", bottom: "-1.5rem", right: "-1.5rem", background: C.yellow, color: C.black, padding: "1.4rem 1.6rem", textAlign: "center" }}>
               <strong style={{ display: "block", fontFamily: FONT.display, fontSize: "3rem", lineHeight: 1 }}>19</strong>
               <span style={{ fontFamily: FONT.cond, fontSize: ".65rem", letterSpacing: ".15em", textTransform: "uppercase", fontWeight: 700 }}>Anos de<br />Experiência</span>
@@ -568,7 +568,7 @@ function Machines() {
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(255px,1fr))", gap: "1.8rem" }}>
           {MACHINES.map(([src, cat, name, desc], i) => (
-            <div key={name} className={`mach-card reveal d${(i % 3) + 1}`} style={{ position: "relative" }}>
+            <div key={name} className={`mach-card reveal d${(i % 3) + 1}`} style={{ position: "relative", overflow: "hidden" }}>
               <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/10" }}>
                 <img src={src} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(25%) contrast(1.1)", transition: "transform .5s ease,filter .5s ease", display: "block" }} />
                 <div className="mach-bar" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 3, background: C.yellow }} />
@@ -651,11 +651,11 @@ function CTAFinal() {
           Solicite seu orçamento agora. Atendemos toda a região com agilidade, qualidade e preço justo.
         </p>
         <div className="cta-actions reveal" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
-          <a href="https://wa.me/5548999999999?text=Olá! Gostaria de solicitar um orçamento de terraplanagem." className="btn-primary"
+          <a href="https://wa.me/554898008162?text=Olá! Gostaria de solicitar um orçamento de terraplanagem." className="btn-primary"
             style={{ display: "inline-flex", alignItems: "center", gap: ".55rem", background: C.yellow, color: C.black, fontFamily: FONT.cond, fontWeight: 700, fontSize: ".88rem", letterSpacing: ".12em", textTransform: "uppercase", padding: ".85rem 2rem", textDecoration: "none" }}>
             <IconWA /> Chamar no WhatsApp
           </a>
-          <a href="mailto:contato@terraforce.com.br" className="btn-ghost"
+          <a href="mailto:enzokaran2@gmail.com" className="btn-ghost"
             style={{ display: "inline-flex", alignItems: "center", gap: ".55rem", background: "transparent", border: "1.5px solid rgba(245,197,24,.4)", color: C.white, fontFamily: FONT.cond, fontWeight: 600, fontSize: ".88rem", letterSpacing: ".12em", textTransform: "uppercase", padding: ".85rem 2rem", textDecoration: "none" }}>
             <IconMail /> Enviar E-mail
           </a>
@@ -663,8 +663,8 @@ function CTAFinal() {
 
         <div className="reveal" style={{ marginTop: "3.5rem", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "3rem" }}>
           {[
-            ["Telefone", "(48) 9 9999-9999", "tel:+5548999999999"],
-            ["E-mail", "contato@terraforce.com.br", "mailto:contato@terraforce.com.br"],
+            ["Telefone", "(48) 9 8000-8162", "tel:+554898008162"],
+            ["E-mail", "enzokaran2@gmail.com", "mailto:enzokaran2@gmail.com"],
             ["Localização", "Tubarão — Santa Catarina", null],
           ].map(([label, value, href]) => (
             <div key={label} style={{ textAlign: "center" }}>
@@ -726,8 +726,8 @@ function Footer() {
         <div>
           <div style={{ fontFamily: FONT.cond, fontWeight: 700, fontSize: ".72rem", letterSpacing: ".2em", textTransform: "uppercase", color: C.yellow, marginBottom: "1.4rem" }}>Contato</div>
           {[
-            ["📞", "Telefone / WhatsApp", "(48) 9 9999-9999"],
-            ["✉️", "E-mail", "contato@terraforce.com.br"],
+            ["📞", "Telefone / WhatsApp", "(48) 9 8000-8162"],
+            ["✉️", "E-mail", "enzokaran2@gmail.com"],
             ["📍", "Localização", "Tubarão — SC\nAtendemos todo o Sul do Brasil"],
             ["🕐", "Horário", "Seg a Sex: 7h–18h\nSáb: 7h–12h"],
           ].map(([ic, label, info]) => (
@@ -746,7 +746,7 @@ function Footer() {
         <div style={{ fontSize: ".78rem", color: "rgba(245,243,239,.28)" }}>© 2024 TerraForce Engenharia. Todos os direitos reservados. CNPJ 00.000.000/0001-00</div>
         <div style={{ display: "flex", gap: ".65rem" }}>
           {[[IconIG, "Instagram"], [IconFB, "Facebook"], [IconWA, "WhatsApp"], [IconLI, "LinkedIn"]].map(([Icon, label]) => (
-            <a key={label} href={label === "WhatsApp" ? "https://wa.me/5548999999999" : "#"} className="social-btn"
+            <a key={label} href={label === "WhatsApp" ? "https://wa.me/554898008162" : "#"} className="social-btn"
               style={{ width: 34, height: 34, border: "1px solid rgba(245,243,239,.12)", display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(245,243,239,.38)", textDecoration: "none" }}
               title={label}>
               <Icon size={15} />
@@ -761,7 +761,7 @@ function Footer() {
 // ── FLOAT WHATSAPP ────────────────────────────────────────────────────────────
 function FloatWA() {
   return (
-    <a href="https://wa.me/5548999999999?text=Olá! Gostaria de um orçamento de terraplanagem."
+    <a href="https://wa.me/554898008162?text=Olá! Gostaria de um orçamento de terraplanagem."
       className="wa-float wa-float-btn"
       title="Falar no WhatsApp"
       style={{ position: "fixed", bottom: "2rem", right: "2rem", zIndex: 900, width: 56, height: 56, background: "#25d366", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }}>
