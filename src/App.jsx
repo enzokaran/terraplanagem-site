@@ -35,7 +35,7 @@ function useFonts() {
       *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
       html{scroll-behavior:smooth;overflow-x:hidden}
       body{background:#0a0a0a;color:#f5f3ef;overflow-x:hidden;max-width:100vw}
-      p,h1,h2,h3,span,a{word-break:break-word;overflow-wrap:break-word}
+      p,h1,h2,h3,h4,span,a,li{word-break:break-word;overflow-wrap:break-word}
       @keyframes heroZoom{0%{transform:scale(1.05)}100%{transform:scale(1.13)}}
       @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
       @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -110,6 +110,8 @@ function useFonts() {
         .gallery-grid>div img{height:180px!important}
         .footer-grid{grid-template-columns:1fr!important}
         .cta-actions{flex-direction:column;align-items:center}
+        .metrics-grid{grid-template-columns:1fr!important}
+        .about-text{min-width:0;width:100%}
       }
     `;
     document.head.appendChild(style);
@@ -405,7 +407,7 @@ function About() {
           </div>
 
           {/* text */}
-          <div className="reveal-r" style={{ minWidth: 0 }}>
+          <div className="reveal-r about-text" style={{ minWidth: 0 }}>
             <div className="reveal"><SectionLabel>Sobre a empresa</SectionLabel></div>
             <SectionTitle>
               MOVEMOS A TERRA.<br />CONSTRUÍMOS<br /><span style={{ color: C.yellow }}>O FUTURO.</span>
@@ -416,7 +418,7 @@ function About() {
             ].map((p, i) => (
               <p key={i} style={{ fontWeight: 300, color: "rgba(245,243,239,.68)", lineHeight: 1.85, marginBottom: ".9rem", fontSize: "1rem" }}>{p}</p>
             ))}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.2rem", marginTop: "2.5rem" }}>
+            <div className="metrics-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.2rem", marginTop: "2.5rem" }}>
               {metrics.map(([n, l], i) => (
                 <div key={l} className={`reveal d${i + 1}`} style={{ padding: "1.4rem", border: "1px solid rgba(245,243,239,.07)", borderTop: `2px solid ${C.yellow}`, background: "rgba(245,197,24,.04)" }}>
                   <strong style={{ display: "block", fontFamily: FONT.display, fontSize: "2.8rem", color: C.yellow, lineHeight: 1 }}>{n}</strong>
