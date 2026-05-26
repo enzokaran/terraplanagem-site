@@ -7,7 +7,7 @@ const IMAGES = {
 
   // ── HERO ────────────────────────────────────────────────────────────────────
   // Imagem de fundo da seção principal (tela cheia)
-  hero: "/imagens/tr1.jpg",
+  hero: "/imagens/tr1.jpeg",
 
   // ── SOBRE NÓS ───────────────────────────────────────────────────────────────
   // Foto da seção "Sobre Nós" (lado esquerdo)
