@@ -1,5 +1,56 @@
 import { useState, useEffect, useRef } from "react";
 
+// ╔══════════════════════════════════════════════════════════════════════════════╗
+// ║                        IMAGENS — LIGUE OS CAMINHOS AQUI                    ║
+// ╚══════════════════════════════════════════════════════════════════════════════╝
+const IMAGES = {
+
+  // ── HERO ────────────────────────────────────────────────────────────────────
+  // Imagem de fundo da seção principal (tela cheia)
+  hero: "tr1.jpeg",
+
+  // ── SOBRE NÓS ───────────────────────────────────────────────────────────────
+  // Foto da seção "Sobre Nós" (lado esquerdo)
+  sobre: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+
+  // ── MODAL DOS SERVIÇOS ───────────────────────────────────────────────────────
+  // Uma imagem para cada serviço (aparece no modal ao clicar "Ver mais")
+  servico_terraplanagem:   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+  servico_escavacao:       "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
+  servico_nivelamento:     "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
+  servico_valas:           "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
+  servico_limpeza:         "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=900&q=80",
+  servico_aterro:          "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+  servico_compactacao:     "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=900&q=80",
+  servico_drenagem:        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
+  servico_locacao:         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+  servico_industrial:      "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
+
+  // ── GALERIA DE OBRAS ─────────────────────────────────────────────────────────
+  // 6 fotos da galeria (a primeira é maior — ocupa mais espaço na grade)
+  galeria_1: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+  galeria_2: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80",
+  galeria_3: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+  galeria_4: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=600&q=80",
+  galeria_5: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80",
+  galeria_6: "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=600&q=80",
+
+  // ── MÁQUINAS / FROTA ─────────────────────────────────────────────────────────
+  // Uma foto para cada máquina da frota
+  maquina_escavadeira:    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+  maquina_retro:          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+  maquina_trator:         "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80",
+  maquina_motoniveladora: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=600&q=80",
+  maquina_rolo:           "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80",
+  maquina_caminhao:       "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=600&q=80",
+
+  // ── CTA FINAL ────────────────────────────────────────────────────────────────
+  // Imagem de fundo da seção de CTA no final da página
+  cta: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=60",
+
+};
+// ════════════════════════════════════════════════════════════════════════════════
+
 // ── DESIGN TOKENS ─────────────────────────────────────────────────────────────
 const C = {
   black: "#0a0a0a",
@@ -315,7 +366,7 @@ function Hero() {
     <section id="hero" style={{ position: "relative", height: "100vh", minHeight: 680, display: "flex", alignItems: "center", overflow: "hidden" }}>
       {/* bg */}
       <div style={{ position: "absolute", inset: 0 }}>
-        <img className="hero-bg-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+        <img className="hero-bg-img" src={IMAGES.hero}
           alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,rgba(10,10,10,.88) 0%,rgba(10,10,10,.5) 55%,rgba(10,10,10,.78) 100%)" }} />
       </div>
@@ -396,7 +447,7 @@ function About() {
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
           {/* image */}
           <div className="reveal-l" style={{ position: "relative", paddingBottom: "1.5rem", paddingRight: "1.5rem" }}>
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+            <img src={IMAGES.sobre}
               alt="Obra de terraplanagem"
               style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover", filter: "grayscale(20%) contrast(1.1)", display: "block" }} />
             <div style={{ position: "absolute", top: 16, left: 16, right: 0, bottom: 0, border: "1px solid rgba(245,197,24,.2)", pointerEvents: "none" }} />
@@ -438,52 +489,52 @@ const SERVICES_DETAIL = {
   "Terraplanagem": {
     desc: "Preparamos o terreno com precisão e eficiência para o início da construção. Desde o estudo topográfico até a execução final, garantimos que o solo esteja adequado ao projeto técnico, com corte, aterro e acabamento de qualidade.",
     items: ["Corte e aterro de terreno", "Regularização e acabamento superficial", "Controle topográfico por GPS", "Adequação de caimento para drenagem", "Laudo técnico de execução"],
-    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+    img: IMAGES.servico_terraplanagem,
   },
   "Escavação": {
     desc: "Realizamos escavações mecânicas com controle topográfico para fundações, piscinas, lagoas e estruturas subterrâneas. Nossa equipe utiliza equipamentos modernos para garantir segurança e precisão em cada metro escavado.",
     items: ["Escavação para fundações e sapatas", "Lagoas, piscinas e reservatórios", "Estruturas subterrâneas", "Controle topográfico contínuo", "Gestão de resíduos e descarte"],
-    img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
+    img: IMAGES.servico_escavacao,
   },
   "Nivelamento": {
     desc: "Com equipamentos de alta precisão e operadores certificados, entregamos superfícies perfeitamente niveladas para lajes, pátios, estradas e áreas industriais, seguindo rigorosamente as cotas do projeto.",
     items: ["Nivelamento topográfico de alta precisão", "Pátios, estradas e vias de acesso", "Áreas industriais e logísticas", "Levantamento planialtimétrico", "Relatório de cotas executadas"],
-    img: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
+    img: IMAGES.servico_nivelamento,
   },
   "Abertura de Valas": {
     desc: "Executamos abertura mecanizada de valas para redes de tubulação, drenagem, esgoto e infraestrutura urbana com rapidez e segurança, minimizando o impacto nas áreas adjacentes.",
     items: ["Valas para tubulações e adutoras", "Redes de drenagem e esgoto", "Infraestrutura urbana e rural", "Escoramento quando necessário", "Reaterro e compactação pós-obra"],
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
+    img: IMAGES.servico_valas,
   },
   "Limpeza de Terreno": {
     desc: "Serviço completo de destoca, raspagem e limpeza do terreno antes do início das obras. Removemos toda a vegetação, raízes, tocos e resíduos, deixando o solo pronto para as próximas etapas construtivas.",
     items: ["Destoca e remoção de raízes", "Raspagem de solo orgânico", "Remoção de resíduos e entulho", "Transporte e descarte adequado", "Preparação para terraplanagem"],
-    img: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=900&q=80",
+    img: IMAGES.servico_limpeza,
   },
   "Aterro e Desaterro": {
     desc: "Realizamos aterro controlado com seleção criteriosa do material e compactação rigorosa por camadas, garantindo máxima estabilidade estrutural conforme as normas técnicas vigentes.",
     items: ["Seleção e fornecimento de material", "Aterro compactado por camadas", "Ensaios de compactação (Proctor)", "Desaterro e remoção de excedente", "Laudo técnico de compactação"],
-    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+    img: IMAGES.servico_aterro,
   },
   "Compactação de Solo": {
     desc: "Utilizamos rolos compactadores e equipamentos especializados para atingir o grau de compactação exigido pelo projeto de engenharia, com controle rigoroso em cada camada executada.",
     items: ["Compactação com rolo pé-de-carneiro", "Compactação com rolo liso vibratório", "Ensaios de grau de compactação", "Controle por camadas (ABNT NBR 7182)", "Emissão de laudos técnicos"],
-    img: "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=900&q=80",
+    img: IMAGES.servico_compactacao,
   },
   "Drenagem": {
     desc: "Projetamos e executamos sistemas de drenagem superficial e profunda para proteção da obra contra infiltrações, erosão e acúmulo de água, garantindo a durabilidade das estruturas.",
     items: ["Drenagem superficial de pátios e estradas", "Drenos profundos e sub-horizontais", "Canaletas e dissipadores de energia", "Instalação de geotêxtil", "Sistema de captação e deságue"],
-    img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
+    img: IMAGES.servico_drenagem,
   },
   "Locação de Máquinas": {
     desc: "Disponibilizamos nossa frota moderna de mais de 35 equipamentos para locação com ou sem operador. Todos os equipamentos são segurados, rastreados e com manutenção preventiva em dia.",
     items: ["Escavadeiras hidráulicas", "Tratores de esteiras e pás-carregadeiras", "Motoniveladoras e rolos compactadores", "Caminhões basculantes (até 30 ton)", "Locação com ou sem operador certificado"],
-    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+    img: IMAGES.servico_locacao,
   },
   "Obras Industriais": {
     desc: "Executamos movimentação de terra em grande escala para galpões, plantas industriais e parques logísticos. Atendemos os mais altos padrões técnicos exigidos por construtoras e incorporadoras.",
     items: ["Terraplanagem de grandes áreas", "Galpões industriais e parques logísticos", "Plantas industriais e mineração", "Gerenciamento técnico de obra", "Relatórios de progresso periódicos"],
-    img: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
+    img: IMAGES.servico_industrial,
   },
 };
 
@@ -617,12 +668,12 @@ function Services() {
 
 // ── GALLERY ───────────────────────────────────────────────────────────────────
 const GALLERY = [
-  ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80", "Complexo Industrial — SC", "span 7", "span 2"],
-  ["https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80", "Escavação Fundação — RS", "span 5", "span 1"],
-  ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80", "Loteamento — SC", "span 5", "span 1"],
-  ["https://images.unsplash.com/photo-1605152276897-4f618f831968?w=600&q=80", "Movimentação Industrial", "span 4", "span 1"],
-  ["https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80", "Estrada Rural — SC", "span 4", "span 1"],
-  ["https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=600&q=80", "Nivelamento Comercial", "span 4", "span 1"],
+  [IMAGES.galeria_1, "Complexo Industrial — SC", "span 7", "span 2"],
+  [IMAGES.galeria_2, "Escavação Fundação — RS", "span 5", "span 1"],
+  [IMAGES.galeria_3, "Loteamento — SC", "span 5", "span 1"],
+  [IMAGES.galeria_4, "Movimentação Industrial", "span 4", "span 1"],
+  [IMAGES.galeria_5, "Estrada Rural — SC", "span 4", "span 1"],
+  [IMAGES.galeria_6, "Nivelamento Comercial", "span 4", "span 1"],
 ];
 
 function Gallery() {
@@ -684,12 +735,12 @@ function Differentials() {
 
 // ── MACHINES ──────────────────────────────────────────────────────────────────
 const MACHINES = [
-  ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80", "Escavação", "Escavadeira Hidráulica", "Caterpillar 320D / Volvo EC220. Potência e precisão para escavações profundas e movimentação de grande volume."],
-  ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80", "Multiuso", "Retroescavadeira", "Case 580N / JCB 3CX. Versátil para escavação, carga, nivelamento e obras em espaços reduzidos."],
-  ["https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80", "Terraplanagem", "Trator de Esteiras", "Caterpillar D6T / Komatsu D65. Ideal para empurrar terra, nivelar grandes áreas e trabalho em terreno íngreme."],
-  ["https://images.unsplash.com/photo-1605152276897-4f618f831968?w=600&q=80", "Nivelamento", "Motoniveladora", "Caterpillar 120K / Komatsu GD555. Perfeita para acabamento fino, nivelamento de pátios e vias de acesso."],
-  ["https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80", "Compactação", "Rolo Compactador", "Dynapac CA2500 / Hamm HD 120. Compactação de solo por camadas com grau de compactação controlado."],
-  ["https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=600&q=80", "Transporte", "Caminhão Basculante", "Mercedes-Benz Axor / Volvo FMX. Transporte de terra, brita e materiais com capacidade de até 30 toneladas."],
+  [IMAGES.maquina_escavadeira, "Escavação", "Escavadeira Hidráulica", "Caterpillar 320D / Volvo EC220. Potência e precisão para escavações profundas e movimentação de grande volume."],
+  [IMAGES.maquina_retro, "Multiuso", "Retroescavadeira", "Case 580N / JCB 3CX. Versátil para escavação, carga, nivelamento e obras em espaços reduzidos."],
+  [IMAGES.maquina_trator, "Terraplanagem", "Trator de Esteiras", "Caterpillar D6T / Komatsu D65. Ideal para empurrar terra, nivelar grandes áreas e trabalho em terreno íngreme."],
+  [IMAGES.maquina_motoniveladora, "Nivelamento", "Motoniveladora", "Caterpillar 120K / Komatsu GD555. Perfeita para acabamento fino, nivelamento de pátios e vias de acesso."],
+  [IMAGES.maquina_rolo, "Compactação", "Rolo Compactador", "Dynapac CA2500 / Hamm HD 120. Compactação de solo por camadas com grau de compactação controlado."],
+  [IMAGES.maquina_caminhao, "Transporte", "Caminhão Basculante", "Mercedes-Benz Axor / Volvo FMX. Transporte de terra, brita e materiais com capacidade de até 30 toneladas."],
 ];
 
 function Machines() {
@@ -769,7 +820,7 @@ function CTAFinal() {
   return (
     <section id="contato" style={{ background: C.coal, position: "relative", overflow: "hidden", textAlign: "center", padding: "8rem 2rem" }}>
       <div style={{ position: "absolute", inset: 0 }}>
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=60"
+        <img src={IMAGES.cta}
           alt="" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: .07 }} />
       </div>
       <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontFamily: FONT.display, fontSize: "clamp(5rem,17vw,15rem)", whiteSpace: "nowrap", color: "rgba(245,197,24,.04)", pointerEvents: "none", lineHeight: 1, zIndex: 1 }}>
