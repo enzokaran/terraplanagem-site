@@ -7,46 +7,46 @@ const IMAGES = {
 
   // ── HERO ────────────────────────────────────────────────────────────────────
   // Imagem de fundo da seção principal (tela cheia)
-  hero: "tr1.jpeg",
+  hero: "/imagens/tr1.jpg",
 
   // ── SOBRE NÓS ───────────────────────────────────────────────────────────────
   // Foto da seção "Sobre Nós" (lado esquerdo)
-  sobre: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+  sobre: "/public/imagens/sobre.jpg",
 
   // ── MODAL DOS SERVIÇOS ───────────────────────────────────────────────────────
   // Uma imagem para cada serviço (aparece no modal ao clicar "Ver mais")
-  servico_terraplanagem:   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
-  servico_escavacao:       "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
-  servico_nivelamento:     "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
-  servico_valas:           "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
-  servico_limpeza:         "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=900&q=80",
-  servico_aterro:          "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
-  servico_compactacao:     "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=900&q=80",
-  servico_drenagem:        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
-  servico_locacao:         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
-  servico_industrial:      "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
+  servico_terraplanagem:   "/imagens/servico-terraplanagem.jpg",
+  servico_escavacao:       "/imagens/servico-escavacao.jpg",
+  servico_nivelamento:     "/imagens/servico-nivelamento.jpg",
+  servico_valas:           "/imagens/servico-valas.jpg",
+  servico_limpeza:         "/imagens/servico-limpeza.jpg",
+  servico_aterro:          "/imagens/servico-aterro.jpg",
+  servico_compactacao:     "/imagens/servico-compactacao.jpg",
+  servico_drenagem:        "/imagens/servico-drenagem.jpg",
+  servico_locacao:         "/imagens/servico-locacao.jpg",
+  servico_industrial:      "/imagens/servico-industrial.jpg",
 
   // ── GALERIA DE OBRAS ─────────────────────────────────────────────────────────
   // 6 fotos da galeria (a primeira é maior — ocupa mais espaço na grade)
-  galeria_1: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
-  galeria_2: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80",
-  galeria_3: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-  galeria_4: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=600&q=80",
-  galeria_5: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80",
-  galeria_6: "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=600&q=80",
+  galeria_1: "/imagens/galeria-1.jpg",
+  galeria_2: "/imagens/galeria-2.jpg",
+  galeria_3: "/imagens/galeria-3.jpg",
+  galeria_4: "/imagens/galeria-4.jpg",
+  galeria_5: "/imagens/galeria-5.jpg",
+  galeria_6: "/imagens/galeria-6.jpg",
 
   // ── MÁQUINAS / FROTA ─────────────────────────────────────────────────────────
   // Uma foto para cada máquina da frota
-  maquina_escavadeira:    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
-  maquina_retro:          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-  maquina_trator:         "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80",
-  maquina_motoniveladora: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=600&q=80",
-  maquina_rolo:           "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80",
-  maquina_caminhao:       "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=600&q=80",
+  maquina_escavadeira:    "/imagens/maquina-escavadeira.jpg",
+  maquina_retro:          "/imagens/maquina-retro.jpg",
+  maquina_trator:         "/imagens/maquina-trator.jpg",
+  maquina_motoniveladora: "/imagens/maquina-motoniveladora.jpg",
+  maquina_rolo:           "/imagens/maquina-rolo.jpg",
+  maquina_caminhao:       "/imagens/maquina-caminhao.jpg",
 
   // ── CTA FINAL ────────────────────────────────────────────────────────────────
   // Imagem de fundo da seção de CTA no final da página
-  cta: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=60",
+  cta: "/imagens/cta.jpg",
 
 };
 // ════════════════════════════════════════════════════════════════════════════════
