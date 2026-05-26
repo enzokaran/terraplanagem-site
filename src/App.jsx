@@ -433,6 +433,132 @@ function About() {
   );
 }
 
+// ── SERVICES DETAIL DATA ──────────────────────────────────────────────────────
+const SERVICES_DETAIL = {
+  "Terraplanagem": {
+    desc: "Preparamos o terreno com precisão e eficiência para o início da construção. Desde o estudo topográfico até a execução final, garantimos que o solo esteja adequado ao projeto técnico, com corte, aterro e acabamento de qualidade.",
+    items: ["Corte e aterro de terreno", "Regularização e acabamento superficial", "Controle topográfico por GPS", "Adequação de caimento para drenagem", "Laudo técnico de execução"],
+    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+  },
+  "Escavação": {
+    desc: "Realizamos escavações mecânicas com controle topográfico para fundações, piscinas, lagoas e estruturas subterrâneas. Nossa equipe utiliza equipamentos modernos para garantir segurança e precisão em cada metro escavado.",
+    items: ["Escavação para fundações e sapatas", "Lagoas, piscinas e reservatórios", "Estruturas subterrâneas", "Controle topográfico contínuo", "Gestão de resíduos e descarte"],
+    img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
+  },
+  "Nivelamento": {
+    desc: "Com equipamentos de alta precisão e operadores certificados, entregamos superfícies perfeitamente niveladas para lajes, pátios, estradas e áreas industriais, seguindo rigorosamente as cotas do projeto.",
+    items: ["Nivelamento topográfico de alta precisão", "Pátios, estradas e vias de acesso", "Áreas industriais e logísticas", "Levantamento planialtimétrico", "Relatório de cotas executadas"],
+    img: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
+  },
+  "Abertura de Valas": {
+    desc: "Executamos abertura mecanizada de valas para redes de tubulação, drenagem, esgoto e infraestrutura urbana com rapidez e segurança, minimizando o impacto nas áreas adjacentes.",
+    items: ["Valas para tubulações e adutoras", "Redes de drenagem e esgoto", "Infraestrutura urbana e rural", "Escoramento quando necessário", "Reaterro e compactação pós-obra"],
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
+  },
+  "Limpeza de Terreno": {
+    desc: "Serviço completo de destoca, raspagem e limpeza do terreno antes do início das obras. Removemos toda a vegetação, raízes, tocos e resíduos, deixando o solo pronto para as próximas etapas construtivas.",
+    items: ["Destoca e remoção de raízes", "Raspagem de solo orgânico", "Remoção de resíduos e entulho", "Transporte e descarte adequado", "Preparação para terraplanagem"],
+    img: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=900&q=80",
+  },
+  "Aterro e Desaterro": {
+    desc: "Realizamos aterro controlado com seleção criteriosa do material e compactação rigorosa por camadas, garantindo máxima estabilidade estrutural conforme as normas técnicas vigentes.",
+    items: ["Seleção e fornecimento de material", "Aterro compactado por camadas", "Ensaios de compactação (Proctor)", "Desaterro e remoção de excedente", "Laudo técnico de compactação"],
+    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+  },
+  "Compactação de Solo": {
+    desc: "Utilizamos rolos compactadores e equipamentos especializados para atingir o grau de compactação exigido pelo projeto de engenharia, com controle rigoroso em cada camada executada.",
+    items: ["Compactação com rolo pé-de-carneiro", "Compactação com rolo liso vibratório", "Ensaios de grau de compactação", "Controle por camadas (ABNT NBR 7182)", "Emissão de laudos técnicos"],
+    img: "https://images.unsplash.com/photo-1571963010638-4d5e6de3c23e?w=900&q=80",
+  },
+  "Drenagem": {
+    desc: "Projetamos e executamos sistemas de drenagem superficial e profunda para proteção da obra contra infiltrações, erosão e acúmulo de água, garantindo a durabilidade das estruturas.",
+    items: ["Drenagem superficial de pátios e estradas", "Drenos profundos e sub-horizontais", "Canaletas e dissipadores de energia", "Instalação de geotêxtil", "Sistema de captação e deságue"],
+    img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80",
+  },
+  "Locação de Máquinas": {
+    desc: "Disponibilizamos nossa frota moderna de mais de 35 equipamentos para locação com ou sem operador. Todos os equipamentos são segurados, rastreados e com manutenção preventiva em dia.",
+    items: ["Escavadeiras hidráulicas", "Tratores de esteiras e pás-carregadeiras", "Motoniveladoras e rolos compactadores", "Caminhões basculantes (até 30 ton)", "Locação com ou sem operador certificado"],
+    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+  },
+  "Obras Industriais": {
+    desc: "Executamos movimentação de terra em grande escala para galpões, plantas industriais e parques logísticos. Atendemos os mais altos padrões técnicos exigidos por construtoras e incorporadoras.",
+    items: ["Terraplanagem de grandes áreas", "Galpões industriais e parques logísticos", "Plantas industriais e mineração", "Gerenciamento técnico de obra", "Relatórios de progresso periódicos"],
+    img: "https://images.unsplash.com/photo-1605152276897-4f618f831968?w=900&q=80",
+  },
+};
+
+// ── SERVICE MODAL ─────────────────────────────────────────────────────────────
+function ServiceModal({ service, onClose }) {
+  const detail = SERVICES_DETAIL[service[1]];
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    const handleKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [onClose]);
+
+  if (!detail) return null;
+  const [icon, title, desc] = service;
+
+  return (
+    <div onClick={onClose} style={{
+      position: "fixed", inset: 0, zIndex: 2000,
+      background: "rgba(10,10,10,.85)", backdropFilter: "blur(6px)",
+      display: "flex", alignItems: "center", justifyContent: "center",
+      padding: "1.5rem",
+    }}>
+      <div onClick={(e) => e.stopPropagation()} style={{
+        background: "#111", border: "1px solid rgba(245,197,24,.18)",
+        maxWidth: 780, width: "100%", maxHeight: "90vh", overflowY: "auto",
+        position: "relative",
+      }}>
+        {/* image header */}
+        <div style={{ position: "relative", height: 220, overflow: "hidden" }}>
+          <img src={detail.img} alt={title} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(.55)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,#111 0%,transparent 55%)" }} />
+          <div style={{ position: "absolute", bottom: "1.5rem", left: "1.8rem", display: "flex", alignItems: "center", gap: "1rem" }}>
+            <span style={{ fontSize: "2rem", lineHeight: 1 }}>{icon}</span>
+            <h2 style={{ fontFamily: FONT.display, fontSize: "clamp(1.8rem,4vw,2.8rem)", color: C.white, letterSpacing: ".04em" }}>{title.toUpperCase()}</h2>
+          </div>
+          {/* close btn */}
+          <button onClick={onClose} style={{
+            position: "absolute", top: "1rem", right: "1rem",
+            background: "rgba(10,10,10,.7)", border: "1px solid rgba(245,243,239,.2)",
+            color: C.white, width: 36, height: 36, cursor: "pointer",
+            display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem",
+          }}>✕</button>
+        </div>
+
+        {/* content */}
+        <div style={{ padding: "2rem 1.8rem" }}>
+          <div style={{ width: 40, height: 2, background: C.yellow, marginBottom: "1.2rem" }} />
+          <p style={{ fontFamily: FONT.body, fontWeight: 300, fontSize: ".95rem", color: "rgba(245,243,239,.72)", lineHeight: 1.8, marginBottom: "1.8rem" }}>
+            {detail.desc}
+          </p>
+          <div style={{ fontFamily: FONT.cond, fontWeight: 700, fontSize: ".68rem", letterSpacing: ".22em", textTransform: "uppercase", color: C.yellow, marginBottom: "1rem" }}>
+            O que está incluso
+          </div>
+          <ul style={{ listStyle: "none", display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))", gap: ".6rem", marginBottom: "2rem" }}>
+            {detail.items.map((item) => (
+              <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: ".88rem", fontWeight: 300, color: "rgba(245,243,239,.65)", lineHeight: 1.5 }}>
+                <span style={{ color: C.yellow, flexShrink: 0, marginTop: ".15rem" }}>→</span> {item}
+              </li>
+            ))}
+          </ul>
+          <a href={`https://wa.me/554898008162?text=Olá! Tenho interesse no serviço de ${title}. Gostaria de um orçamento.`}
+            className="btn-primary"
+            style={{ display: "inline-flex", alignItems: "center", gap: ".55rem", background: C.yellow, color: C.black, fontFamily: FONT.cond, fontWeight: 700, fontSize: ".85rem", letterSpacing: ".12em", textTransform: "uppercase", padding: ".8rem 1.8rem", textDecoration: "none" }}>
+            <IconWA /> Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── SERVICES ──────────────────────────────────────────────────────────────────
 const SERVICES = [
   ["⛏️", "Terraplanagem", "Preparo do terreno com precisão e eficiência, adequando o solo para início da construção conforme projeto técnico."],
@@ -448,6 +574,8 @@ const SERVICES = [
 ];
 
 function Services() {
+  const [activeService, setActiveService] = useState(null);
+
   return (
     <section id="servicos" style={{ background: C.black, padding: "6rem 0" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem" }}>
@@ -472,13 +600,17 @@ function Services() {
               <span className="svc-icon" style={{ fontSize: "2rem", display: "block", marginBottom: "1.4rem", lineHeight: 1 }}>{icon}</span>
               <h3 style={{ fontFamily: FONT.cond, fontWeight: 700, fontSize: "1.1rem", letterSpacing: ".06em", textTransform: "uppercase", marginBottom: ".65rem", color: C.white }}>{title}</h3>
               <p style={{ fontSize: ".88rem", fontWeight: 300, color: "rgba(245,243,239,.52)", lineHeight: 1.7 }}>{desc}</p>
-              <div className="svc-arrow" style={{ marginTop: "1.1rem", fontFamily: FONT.cond, fontSize: ".7rem", letterSpacing: ".15em", textTransform: "uppercase", color: C.yellow, display: "inline-flex", alignItems: "center", gap: ".4rem" }}>
+              <button
+                onClick={() => setActiveService([icon, title, desc])}
+                className="svc-arrow"
+                style={{ marginTop: "1.1rem", fontFamily: FONT.cond, fontSize: ".7rem", letterSpacing: ".15em", textTransform: "uppercase", color: C.yellow, display: "inline-flex", alignItems: "center", gap: ".4rem", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
                 Ver mais <IconArrow />
-              </div>
+              </button>
             </div>
           ))}
         </div>
       </div>
+      {activeService && <ServiceModal service={activeService} onClose={() => setActiveService(null)} />}
     </section>
   );
 }
