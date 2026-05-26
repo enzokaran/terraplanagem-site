@@ -685,7 +685,7 @@ function Gallery() {
       </div>
       <div className="gallery-grid reveal" style={{ display: "grid", gridTemplateColumns: "repeat(12,1fr)", gridTemplateRows: "auto", gap: 3, marginTop: "2rem", maxWidth: 1400, margin: "2rem auto 0" }}>
         {GALLERY.map(([src, label, col, row], i) => (
-          <div key={i} className="gal-item" style={{ gridColumn: col, gridRow: row }}>
+          <div key={i} className="gal-item" style={{ gridColumn: col, gridRow: row, height: i === 0 ? 563 : "auto" }}>
             <img src={src} alt={label} style={{ width: "100%", height: i === 0 ? "100%" : 280, minHeight: i === 0 ? 560 : "auto", objectFit: "cover", display: "block" }} />
             <div className="gal-overlay" style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(10,10,10,.88) 0%,transparent 60%)", opacity: 0, transition: "opacity .4s" }} />
             <div className="gal-label" style={{ position: "absolute", bottom: "1.4rem", left: "1.4rem", fontFamily: FONT.cond, fontWeight: 700, fontSize: ".75rem", letterSpacing: ".15em", textTransform: "uppercase", color: C.yellow, opacity: 0, transform: "translateY(8px)", transition: "all .4s" }}>
