@@ -915,7 +915,7 @@ function Footer() {
             ["📞", "Telefone / WhatsApp", "(48) 9 8000-8162"],
             ["✉️", "E-mail", "enzokaran2@gmail.com"],
             ["📍", "Localização", "Tubarão — SC\nAtendemos todo o Sul do Brasil"],
-            ["🕐", "Horário", "Seg a Sex: 7h–18h\nSáb: 7h–12h"],
+            ["🕐", "Horário", "Seg a Sexta: 7h–18h\nSáb: 7h–12h"],
           ].map(([ic, label, info]) => (
             <div key={label} style={{ display: "flex", gap: ".7rem", alignItems: "flex-start", marginBottom: "1rem" }}>
               <div style={{ width: 30, height: 30, border: "1px solid rgba(245,197,24,.25)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".85rem", flexShrink: 0, color: C.yellow }}>{ic}</div>
