@@ -157,8 +157,8 @@ function useFonts() {
         .nav-links-desktop{display:none!important}
         .hamburger-btn{display:flex!important}
         .gallery-grid{grid-template-columns:1fr 1fr!important}
-        .gallery-grid>div{grid-column:span 1!important;grid-row:span 1!important}
-        .gallery-grid>div img{height:180px!important}
+        .gallery-grid>div{grid-column:span 1!important;grid-row:span 1!important;height:auto!important}
+        .gallery-grid>div img{height:180px!important;min-height:unset!important}
         .footer-grid{grid-template-columns:1fr!important}
         .cta-actions{flex-direction:column;align-items:center}
         .metrics-grid{grid-template-columns:1fr!important}
