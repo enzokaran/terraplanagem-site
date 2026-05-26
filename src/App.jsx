@@ -29,7 +29,7 @@ const IMAGES = {
   // ── GALERIA DE OBRAS ─────────────────────────────────────────────────────────
   // 6 fotos da galeria (a primeira é maior — ocupa mais espaço na grade)
   galeria_1: "/imagens/tr1.jpeg",
-  galeria_2: "/imagens/tr2.jpeg",
+  galeria_2: "/imagens/tr9.jpeg",
   galeria_3: "/imagens/tr3.jpeg",
   galeria_4: "/imagens/tr4.jpeg",
   galeria_5: "/imagens/tr5.jpeg",
