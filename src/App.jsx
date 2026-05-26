@@ -66,7 +66,7 @@ function useFonts() {
       .svc-card:hover .svc-arrow{opacity:1!important;transform:translateX(0)!important}
       .svc-card:hover .svc-num{color:rgba(245,197,24,.06)!important}
       .svc-icon{transition:all .35s ease;color:rgba(245,243,239,.3)}
-      .svc-arrow{opacity:0;transform:translateX(-8px);transition:all .35s ease}
+      .svc-arrow{opacity:1;transform:translateX(0);transition:all .35s ease}
       .diff-card{transition:transform .35s,border-color .35s,background .35s}
       .diff-card:hover{transform:translateY(-3px);border-color:rgba(245,197,24,.3)!important;background:rgba(245,197,24,.04)!important}
       .diff-card:hover .diff-icon{background:#f5c518!important;color:#0a0a0a!important}
