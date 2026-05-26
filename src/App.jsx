@@ -11,42 +11,42 @@ const IMAGES = {
 
   // ── SOBRE NÓS ───────────────────────────────────────────────────────────────
   // Foto da seção "Sobre Nós" (lado esquerdo)
-  sobre: "/public/imagens/sobre.jpg",
+  sobre: "/public/imagens/logo.jpeg",
 
   // ── MODAL DOS SERVIÇOS ───────────────────────────────────────────────────────
   // Uma imagem para cada serviço (aparece no modal ao clicar "Ver mais")
-  servico_terraplanagem:   "/imagens/servico-terraplanagem.jpg",
-  servico_escavacao:       "/imagens/servico-escavacao.jpg",
-  servico_nivelamento:     "/imagens/servico-nivelamento.jpg",
-  servico_valas:           "/imagens/servico-valas.jpg",
-  servico_limpeza:         "/imagens/servico-limpeza.jpg",
-  servico_aterro:          "/imagens/servico-aterro.jpg",
-  servico_compactacao:     "/imagens/servico-compactacao.jpg",
-  servico_drenagem:        "/imagens/servico-drenagem.jpg",
-  servico_locacao:         "/imagens/servico-locacao.jpg",
-  servico_industrial:      "/imagens/servico-industrial.jpg",
+  servico_terraplanagem:   "/imagens/tr5.jpeg",
+  servico_escavacao:       "/imagens/tr6.jpeg",
+  servico_nivelamento:     "/imagens/tr7.jpeg",
+  servico_valas:           "/imagens/vala.jpeg",
+  servico_limpeza:         "/imagens/tr9.jpeg",
+  servico_aterro:          "/imagens/tr13.jpeg",
+  servico_compactacao:     "/imagens/tr8.jpeg",
+  servico_drenagem:        "/imagens/tr12.jpeg",
+  servico_locacao:         "/imagens/tr11.jpeg",
+  servico_industrial:      "/imagens/logo.jpeg",
 
   // ── GALERIA DE OBRAS ─────────────────────────────────────────────────────────
   // 6 fotos da galeria (a primeira é maior — ocupa mais espaço na grade)
-  galeria_1: "/imagens/galeria-1.jpg",
-  galeria_2: "/imagens/galeria-2.jpg",
-  galeria_3: "/imagens/galeria-3.jpg",
-  galeria_4: "/imagens/galeria-4.jpg",
-  galeria_5: "/imagens/galeria-5.jpg",
-  galeria_6: "/imagens/galeria-6.jpg",
+  galeria_1: "/imagens/tr1.jpeg",
+  galeria_2: "/imagens/tr2.jpeg",
+  galeria_3: "/imagens/tr3.jpeg",
+  galeria_4: "/imagens/tr4.jpeg",
+  galeria_5: "/imagens/tr5.jpeg",
+  galeria_6: "/imagens/tr6.jpeg",
 
   // ── MÁQUINAS / FROTA ─────────────────────────────────────────────────────────
   // Uma foto para cada máquina da frota
-  maquina_escavadeira:    "/imagens/maquina-escavadeira.jpg",
-  maquina_retro:          "/imagens/maquina-retro.jpg",
-  maquina_trator:         "/imagens/maquina-trator.jpg",
-  maquina_motoniveladora: "/imagens/maquina-motoniveladora.jpg",
-  maquina_rolo:           "/imagens/maquina-rolo.jpg",
-  maquina_caminhao:       "/imagens/maquina-caminhao.jpg",
+  maquina_escavadeira:    "/imagens/retro.jpeg",
+  maquina_retro:          "/imagens/retroreal.jpeg",
+  maquina_trator:         "/imagens/trator.jpeg",
+  maquina_motoniveladora: "/imagens/niveladora.jpeg",
+  maquina_rolo:           "/imagens/rolo.jpeg",
+  maquina_caminhao:       "/imagens/caminhao.jpeg",
 
   // ── CTA FINAL ────────────────────────────────────────────────────────────────
   // Imagem de fundo da seção de CTA no final da página
-  cta: "/imagens/cta.jpg",
+  cta: "/imagens/tr1.jpeg",
 
 };
 // ════════════════════════════════════════════════════════════════════════════════
